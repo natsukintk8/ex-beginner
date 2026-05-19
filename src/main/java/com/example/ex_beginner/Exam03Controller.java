@@ -24,15 +24,11 @@ public class Exam03Controller {
         int price2 = Integer.parseInt(item2);
         int price3 = Integer.parseInt(item3);
 
-        application.setAttribute("item1",price1);
-        application.setAttribute("item2",price2);
-        application.setAttribute("item3",price3);
-
         int notTaxPrice = price1 + price2 + price3;
-        int taxPrice = (price1 + price2 + price3) * 11/10;
+        int taxPrice = notTaxPrice * 11/10;
 
-        application.setAttribute("notTaxPrice",String.format("%,d", notTaxPrice));
-        application.setAttribute("taxPrice",String.format("%,d", taxPrice));
+        application.setAttribute("notTaxPrice",notTaxPrice);
+        application.setAttribute("taxPrice",taxPrice);
 
         return "exam03-result";
     }
