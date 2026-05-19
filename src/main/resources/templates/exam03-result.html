@@ -5,6 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>合計金額</h1>
+<br>
+■ 税抜き価格<br>
+<span th:text="${application.notTaxPrice}"></span>円<br>
+<br>
+■ 税込み価格<br>
+<span th:text="${application.taxPrice}"></span>円
 </body>
 </html>
